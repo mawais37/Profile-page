@@ -1,0 +1,125 @@
+/* Add your custom styles here */
+* {
+  margin: 0px;
+}
+body {
+  
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  
+}
+
+.profile-card {
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%;
+  z-index: 1000;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.profile-card img {
+  padding-bottom: 15px;
+  border-radius: 100%;
+  
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  border: 2px solid transparent; /* Set initial transparent border */
+  border-image: linear-gradient(to right, #ff7e5f, #feb47b, #ffdf00, #9fd8df, #8d6acb, #ff7e5f) 1; /* Apply gradient border */
+  border-radius: 10px; /* Adjust border radius */
+  position: relative;
+  
+}
+
+
+.profile-card:hover:before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Adjust top position to match border width */
+  left: -4px; /* Adjust left position to match border width */
+  right: -4px; /* Adjust right position to match border width */
+  bottom: -4px; /* Adjust bottom position to match border width */
+  z-index: -1;
+  border: 2px solid transparent; /* Ensure the pseudo-element border matches the div border */
+  background: linear-gradient(to right,   #E7BCDE, #ff7e5f, #A0E9FF, #9fd8df, #8d6acb, #00A9FF); /* Gradient colors */
+  background-size: 400% 400%; /* Increase background size for animation */
+  border-radius: 10px; /* Adjust border radius to match div */
+  animation: gradientAnimation 10s linear infinite; /* Animation */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%; /* Start position */
+  }
+  100% {
+    background-position: 100% 100%; /* End position */
+  }
+}
+
+
+
+.profile-info {
+  z-index: 1000;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.notifications {
+  border: 1px solid #19172e;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  z-index: 1000;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+h2 {
+  color: #19172e;
+ 
+}
+h3 {
+  color: #19172e;
+  
+}
+p {
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
+
+
+.btn {
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #19172e; /* Green */
+  color: white;
+}
