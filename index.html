@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Interactive Profile</title>
+  </head>
+  <body>
+    <!-- Profile Section -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-card" id="profileCard">
+            <img
+              src="images/profile.png"
+              alt="Profile Picture"
+              class="img-fluid"
+            />
+            <h2>Muhammad Awais</h2>
+            <p>A professional Web Designer nad WordPress Developer.</p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="profile-info">
+            <h3>Skills</h3>
+            <p id="skills">HTML, CSS, JavaScript</p>
+
+            <h3>Education</h3>
+            <p id="education">Degree in Computer Science</p>
+
+            <h3>Experience</h3>
+            <p id="experience">Web Developer at AFverse</p>
+
+            <h3>Portfolio</h3>
+            <p id="portfolio">
+              <a href="https://example.com" target="_blank">My Portfolio</a>
+            </p>
+
+            <h3>Social Media</h3>
+            <p id="socialMedia">
+              <a href="https://twitter.com/example" target="_blank">Twitter</a>
+              <a href="https://linkedin.com/in/example" target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+
+            <!-- Form to update information -->
+            <form id="updateForm">
+              <label for="skillsInput">Skills:</label>
+              <input type="text" id="skillsInput" class="form-control" />
+
+              <label for="educationInput">Education:</label>
+              <input type="text" id="educationInput" class="form-control" />
+
+              <label for="experienceInput">Experience:</label>
+              <input type="text" id="experienceInput" class="form-control" />
+
+              <label for="portfolioInput">Portfolio:</label>
+              <input type="text" id="portfolioInput" class="form-control" />
+
+              <label for="socialMediaInput">Social Media:</label>
+              <input type="text" id="socialMediaInput" class="form-control" />
+
+              <button
+                type="button"
+                onclick="updateInformation()"
+                class="btn btn-secondry-outline mt-3"
+              >
+                Update Information
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notifications">
+            <h3>Notifications</h3>
+            <p id="notificationMessage"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
